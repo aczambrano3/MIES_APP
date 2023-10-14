@@ -1,0 +1,67 @@
+a{
+    color: #fff;
+}
+
+p.required-red{
+    text-align: center;
+    color: #2ba4bd;
+}
+
+p.required-red2{
+    font-size:15px;
+    text-align: center;
+    color: #d10000;
+}
+
+.center{
+    text-align: center; 
+}
+
+
+.cText{
+    font-family: 'Arial Black';
+    font-size: 26px;
+    color: rgb(146, 146, 146)
+}
+
+input[type="text"],[type="number"],[type="date"]{
+    background: rgb(223, 223, 223);
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+}
+
+.input-field {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+.inline{
+    max-width:500px;
+    margin:auto;
+}
+.input-icons i {
+    position: absolute;
+}
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+.icon {
+    padding: 12px;
+    min-width: 40px;
+}
+
+.genre{
+    background: rgb(223, 223, 223);
+    border: 1px solid #0d6efd;
+    border-radius: 4px
+}
+
+.textoPeqBold{
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(0, 0, 0)
+}

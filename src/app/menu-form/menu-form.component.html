@@ -1,0 +1,66 @@
+<header>
+    <div class="topnav">
+
+        <app-menu [indice]="indice"></app-menu>
+    </div>
+</header>
+
+<div class="container">
+    <form>
+        <h3 class="titles">{{this.am_nombres}} {{this.am_apellidos}} </h3><br>
+        <div class="grid-cont">
+            <div>
+                <button type="button" style="width: 100px;height: 150px; background-color: white;border: none;"
+                    (click)="dirigirLawton()">
+
+                    <a><img class="image4" [src]="ImagePath2" style="width: 60px;height: 60px;"></a>
+                    <h5 class="dates">
+                        ESCALA DE LAWTON Y BRODY
+                    </h5>
+                </button>
+            </div>
+            
+            <div>
+                <button type="button" style="width: 100px;height: 150px; background-color: white;border: none;"
+                    (click)="dirigirMini()">
+
+                    <a><img class="image4" [src]="ImagePath2" style="width: 60px;height: 60px;"></a>
+                    <h5 class="dates">
+                        MINI EXAMEN DEL ESTADO MENTAL
+                    </h5>
+                </button>
+            </div>
+            <div>
+                <button type="button" style="width: 100px;height: 150px; background-color: white;border: none;"
+                    (click)="dirigirYesavage(idEncabezado)">
+
+                    <a><img class="image4" [src]="ImagePath2" style="width: 60px;height: 60px;"></a>
+                    <h5 class="dates">
+                        ESCALA DE YESAVAGE
+                    </h5>
+                </button>
+            </div>
+            <div>
+                <button type="button" style="width: 100px;height: 150px; background-color: white;border: none;"
+                    (click)="dirigirBarthel()">
+
+                    <a><img class="image4" [src]="ImagePath2" style="width: 60px;height: 60px;"></a>
+                    <h5 class="dates">
+                        INDICE DE BARTHEL
+                    </h5>
+                </button>
+            </div>
+
+        </div>
+        <div class="botones">
+            <div class="alinearBotones">
+                <button mat-flat-button color="primary" type="button" (click)="dirigirObservacion()">Agregar Observación</button>
+
+            </div>
+
+            <div class="alinearBotones">
+                <button (click)="onBack()" mat-raised-button color="warn">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</div>

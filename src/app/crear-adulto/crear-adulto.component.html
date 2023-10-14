@@ -1,0 +1,97 @@
+
+<p class="fixed-top">
+    <mat-toolbar class="bg-primary">
+      <span style="color: white;">MIES APP</span>
+    </mat-toolbar>
+</p>
+
+<div style="margin-top: 25%"></div>
+
+<div>
+    <h1 class="center cText">Registro Adulto Mayor</h1>
+    <form class="inline" [formGroup]="form">
+        <div class="container input-icons">
+            <a>
+                <br>
+                <i class="fa fa-solid fa-fingerprint icon"></i>
+                <input type="number" formControlName="cedula" class="form-control input-field"  placeholder="Cédula">
+                <div *ngIf="form.get('cedula')?.errors && form.get('cedula')?.dirty">
+                    <p class="required-red" *ngIf="form.get('cedula')?.hasError('required')">La cedula es un campo requerido</p>
+                </div>
+            </a>
+
+            <a>
+                <br>
+                <i class="fa-solid fa-user icon"></i>
+                <input type="text" formControlName="name" class="form-control input-field"  placeholder="Nombres" aria-label="default input example">
+                <div *ngIf="form.get('name')?.errors && form.get('name')?.dirty">
+                    <p class="required-red" *ngIf="form.get('name')?.hasError('required')">El nombre es un campo requerido</p>
+                </div>
+            </a>
+            <a>
+                <br>
+                <i class="fa-solid fa-user icon"></i>
+                <input type="text" formControlName="lastname" class="form-control input-field"  placeholder="Apellidos" aria-label="default input example">
+                <div *ngIf="form.get('lastname')?.errors && form.get('lastname')?.dirty">
+                    <p class="required-red" *ngIf="form.get('lastname')?.hasError('required')">El apellido es un campo requerido</p>
+                </div>
+            </a>
+            <a>
+                <br>
+                <i class="fa-solid fa-mars-and-venus icon"></i>
+                <div class="form-control genre input-field" >
+                    <mat-select placeholder="Selecciona un género" formControlName="genero">
+                        <mat-option *ngFor="let item of genero" [value]="item.value">
+                            {{item.viewValue}}
+                        </mat-option>   
+                    </mat-select>
+                </div>
+            </a>
+            <a>
+                <br>
+                <p class="textoPeqBold">Fecha de nacimiento: </p>
+                <input type="date" formControlName="date" class="form-control"  placeholder="Fecha de nacimiento" aria-label="default input example">
+                <div *ngIf="form.get('date')?.errors && form.get('date')?.dirty">
+                    <p class="required-red" *ngIf="form.get('date')?.hasError('required')">Fecha de nacimiento es un campo requerido</p>
+                </div>
+            </a>
+            
+            <a>
+                <br>
+                <i class="fa-solid fa-users icon"></i>
+                <input type="text" formControlName="etnia" class="form-control input-field"  placeholder="Autoidentificación étnica" aria-label="default input example">
+                <div *ngIf="form.get('etnia')?.errors && form.get('etnia')?.dirty">
+                    <p class="required-red" *ngIf="form.get('etnia')?.hasError('required')">La denominacion etnica es un campo requerido</p>
+                </div>
+            </a>
+            <a>
+                <br>
+                <i class="fa-solid fa-location-dot icon"></i>
+                <input type="text" formControlName="direccion" class="form-control input-field"  placeholder="Dirección" aria-label="default input example">
+                <div *ngIf="form.get('direccion')?.errors && form.get('direccion')?.dirty">
+                    <p class="required-red" *ngIf="form.get('direccion')?.hasError('required')">La direccion es un campo requerido</p>
+                </div>
+            </a>
+            <a>
+                <br>
+                <i class="fa-solid fa-earth-americas icon"></i>
+                <input type="text" formControlName="origen" class="form-control input-field"  placeholder="Origen" aria-label="default input example">
+                <div *ngIf="form.get('origen')?.errors && form.get('origen')?.dirty">
+                    <p class="required-red" *ngIf="form.get('origen')?.hasError('required')">El origen es un campo requerido</p>
+                </div>
+            </a>
+            
+            <br>
+
+            <div class="center">     
+                <p class="required-red2" *ngIf="hayError">Comprueba los campos y vuelve a intentarlo</p>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary" (click)="save($event)">Registrar</button>
+                <button type="button" class="btn btn-danger" (click)="onBack()">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</div>
+

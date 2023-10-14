@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<p class="fixed-top">
+  <mat-toolbar class="bg-primary">
+    <span style="color: white;">MIES APP</span>
+  </mat-toolbar>
+
+
+  <mat-toolbar>
+
+    <mat-icon >person</mat-icon>
+    <!--Direccionar -->
+    <span >Usuario: </span>
+
+    <mat-toolbar>
+      <span class="title-center"> Margoth Elisa</span>
+    </mat-toolbar>
+
+    <span class="filler"></span>
+    <mat-icon routerLink="/">settings</mat-icon>
+
+  </mat-toolbar>
+  <!--busqueda-->
+  <mat-toolbar>
+
+    <mat-toolbar>
+      <div class="input-icons">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input style="text-align:center" class="form-control" type="text" name="search" [(ngModel)]="searchText"
+          autocomplete="off" placeholder="Buscar">
+      </div>
+         
+            
+    </mat-toolbar>
+    <button mat-mini-fab color="primary"  >
+      <mat-icon routerLink="/crearAdulto/{{tec_id}}">note_add</mat-icon>
+    </button>
+  </mat-toolbar>
+
+
+
+</p>
+
+<span class="material-symbols-outlined">
+  account_circle
+</span>
+<div class="container" style="margin-top: 160px;">
+  <mat-list>
+    <mat-list-item *ngFor="let persona of data | filter:searchText">
+      <mat-icon matListAvatar>account_circle</mat-icon>
+      <div matLine  routerLink="/app-ubicacion/{{persona._id}}/{{persona.am_nombres}}/{{persona.am_apellidos}}/{{persona.tec_id}}">
+        {{persona.am_nombres}} {{' '+persona.am_apellidos}}</div>
+      <div matLine>Genero: {{persona.am_genero}}</div>
+      <div matLine>Domicilio : {{persona.am_dir}}</div>
+      <mat-icon routerLink="/modificarAdulto/{{persona._id}}">visibility</mat-icon>
+    </mat-list-item>
+  </mat-list>
+</div>
+
+<hr>
+
+<div class="center">
+  <span>
+    Adultos encontrados: {{adultosCount}}
+  </span>
+
+  <hr>
+</div>

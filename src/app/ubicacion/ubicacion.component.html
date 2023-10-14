@@ -1,0 +1,27 @@
+<app-menu [indice]="indice"></app-menu>
+<div class="container">
+  <h2>Ubicación del adulto mayor</h2>
+  <div class="texto">
+    <p class="primero">El adulto mayor puede relaizar el test con acompañamiento únicamente en su domicilio.</p>
+
+    <p class="segundo">Antes de realizar los test debe informar sobre el sitio donde están llevando a cabo.</p>
+  </div>
+  <form [formGroup]="ubicacionForm" class="item">
+    <mat-radio-group formControlName="ubicacion" aria-labelledby="example-radio-group-label" class="example-radio-group"
+      [(ngModel)]="itemUbicacion">
+      <mat-radio-button  class="example-radio-button" *ngFor="let ubi of ubicaciones" [value]="ubi">
+        {{ubi}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </form>
+  <div class="botones">
+    <div class="alinearBotones">
+      <button mat-raised-button color="primary" type="submit" (click)="agregarUbicacion()">Continuar</button>
+
+    </div>
+
+    <div class="alinearBotones">
+      <a (click)="onBack()" mat-raised-button color="warn">Cancelar</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<app-menu [indice]="indice"></app-menu>
+<div class="container">
+
+    <form [formGroup]="form" novalidate (ngSubmit)="save($event)" class="d-grid col-11 col-sm-6 mx-auto">
+
+        <div class="contenedor">
+            <p style="margin-bottom: 10%;">Estas encuestas deben ser realizadas de preferencia por el adulto mayor
+            </p>
+            <p>El siguiente formato se responderá de manera:</p>
+
+            <div class="res">
+                <mat-radio-group class="example-radio-group" [(ngModel)]="P1Seleccionada" formControlName="pregunta1">
+                    <mat-radio-button style="margin-top: 20%;" class="example-radio-button" *ngFor="let E of estado"
+                        [value]="E">
+                        {{E}}
+                    </mat-radio-button>
+                </mat-radio-group>
+                <div
+                    *ngIf="form.get('pregunta1')?.errors && form.get('pregunta1')?.invalid && form.get('pregunta1')?.touched">
+                    <p class="error-rad" *ngIf="form.get('pregunta1')?.hasError('required')">
+                        Debe seleccionar una opción.
+                    </p>
+                </div>
+            </div>
+
+
+
+
+            <div class="botones">
+            </div>
+
+            <div class="botones">
+                <div class="alinearBotones">
+                    <button (click)="btnContinuar(P1Seleccionada,idEncabezado)" mat-raised-button
+                        color="primary">Continuar</button>
+
+
+                </div>
+
+                <div class="alinearBotones">
+                    <button (click)="onBack()" mat-raised-button color="warn">Cancelar</button>
+
+                </div>
+            </div>
+            <!--
+                <div class="botones">
+                    <button (click)="btnContinuar(P1Seleccionada,idEncabezado)" class="continuar" mat-raised-button color="primary">CONTINUAR</button>
+                    <button class="cancelar" mat-raised-button color="warn">CANCELAR</button>
+                </div>
+
+            -->
+
+        </div>
+
+
+    </form>
+
+</div>

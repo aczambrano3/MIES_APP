@@ -1,0 +1,23 @@
+:host {
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    p{
+        color: #5a6978;
+        font-family: sans-serif;
+    }
+    .contenido {
+        padding: 5% 10%;
+        text-align: center;
+    }
+    .contenido h1 { margin-bottom: 48px; }
+    .button-row {text-align: center;}
+    .button-row button {
+        margin: 5px 8px;
+        width: 135px;
+    }
+    footer {
+        padding-bottom: 10%;
+    }
+}

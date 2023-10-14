@@ -1,0 +1,20 @@
+.letras {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.img{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.contenedorPreguntas {
+    background-color: #59BCED;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 50px;
+}

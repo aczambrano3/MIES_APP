@@ -1,0 +1,152 @@
+<app-menu [indice]="indice"></app-menu>
+<div class="contenedor">
+    <form [formGroup]="form" novalidate (ngSubmit)="save($event)" class="d-grid col-11 col-sm-6 mx-auto">
+
+        <div>
+            <div class="cont">
+                <div class="tiempo">
+                    <p><b>Tiempo transcurrido: {{hr}}:{{min}}:{{seg}}</b>
+                    </p>
+                </div>
+                <div class="prr">
+                    <label class="pregunta">1. CAPACIDAD PARA USAR EL TELEFONO</label>
+                </div>
+                <mat-radio-group class="example-radio-group" [(ngModel)]="P1Seleccionada" formControlName="pregunta1">
+                    <mat-radio-button class="example-radio-button" *ngFor="let season of P1" [value]="season">
+                        {{season}}
+                    </mat-radio-button>
+                </mat-radio-group>
+                <div
+                    *ngIf="form.get('pregunta1')?.errors && form.get('pregunta1')?.invalid && form.get('pregunta1')?.touched">
+                    <p class="error-rad" *ngIf="form.get('pregunta1')?.hasError('required')">
+                        Debe seleccionar una opción.
+                    </p>
+                </div>
+                <div class="prr">
+                    <label class="pregunta">2. HACER COMPRAS</label>
+                </div>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                    [(ngModel)]="P2Seleccionada" formControlName="pregunta2">
+                    <mat-radio-button class="example-radio-button" *ngFor="let season of P2" [value]="season">
+                        {{season}}
+                    </mat-radio-button>
+                </mat-radio-group>
+                <div
+                    *ngIf="form.get('pregunta2')?.errors && form.get('pregunta2')?.invalid && form.get('pregunta2')?.touched">
+                    <p class="error-rad" *ngIf="form.get('pregunta2')?.hasError('required')">
+                        Debe seleccionar una opción.
+                    </p>
+                </div>
+                <div class="prr">
+                    <label class="pregunta">3. PREPARACIÓN DE LA COMIDA.</label>
+                </div>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                    [(ngModel)]="P3Seleccionada" formControlName="pregunta3">
+                    <mat-radio-button class="example-radio-button" *ngFor="let season of P3" [value]="season">
+                        {{season}}
+                    </mat-radio-button>
+                </mat-radio-group>
+                <div
+                    *ngIf="form.get('pregunta3')?.errors && form.get('pregunta3')?.invalid && form.get('pregunta3')?.touched">
+                    <p class="error-rad" *ngIf="form.get('pregunta3')?.hasError('required')">
+                        Debe seleccionar una opción.
+                    </p>
+                </div>
+
+                <div class="prr">
+                    <label class="pregunta">4. CUIDADO DE LA CASA.</label>
+                </div>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                    [(ngModel)]="P4Seleccionada" formControlName="pregunta4">
+                    <mat-radio-button class="example-radio-button" *ngFor="let season of P4" [value]="season">
+                        {{season}}
+                    </mat-radio-button>
+                </mat-radio-group>
+
+                <div
+                    *ngIf="form.get('pregunta4')?.errors && form.get('pregunta4')?.invalid && form.get('pregunta4')?.touched">
+                    <p class="error-rad" *ngIf="form.get('pregunta4')?.hasError('required')">
+                        Debe seleccionar una opción.
+                    </p>
+                </div>
+
+                <div class="prr">
+                    <label class="pregunta">5. LAVADO DE LA ROPA.</label>
+                </div>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                    [(ngModel)]="P5Seleccionada" formControlName="pregunta5">
+                    <mat-radio-button class="example-radio-button" *ngFor="let season of P5" [value]="season">
+                        {{season}}
+                    </mat-radio-button>
+                </mat-radio-group>
+
+                <div
+                    *ngIf="form.get('pregunta5')?.errors && form.get('pregunta5')?.invalid && form.get('pregunta5')?.touched">
+                    <p class="error-rad" *ngIf="form.get('pregunta5')?.hasError('required')">
+                        Debe seleccionar una opción.
+                    </p>
+                </div>
+                <div class="prr">
+                    <label class="pregunta">6. USO DE MEDIOS DE TRANSPORTE.</label>
+                </div>
+                <div>
+                    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                        [(ngModel)]="P6Seleccionada" formControlName="pregunta6">
+                        <mat-radio-button class="example-radio-button" *ngFor="let season of P6" [value]="season">
+                            {{season}}
+                        </mat-radio-button>
+                    </mat-radio-group>
+
+                    <div
+                        *ngIf="form.get('pregunta6')?.errors && form.get('pregunta6')?.invalid && form.get('pregunta6')?.touched">
+                        <p class="error-rad" *ngIf="form.get('pregunta6')?.hasError('required')">
+                            Debe seleccionar una opción.
+                        </p>
+                    </div>
+                </div>
+                <div class="prr">
+                    <label class="pregunta">7. RESPONSABILIDAD RESPECTO A SU MEDICACIÓN.</label>
+                </div>
+
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                    [(ngModel)]="P7Seleccionada" formControlName="pregunta7">
+                    <mat-radio-button class="example-radio-button" *ngFor="let season of P7" [value]="season">
+                        {{season}}
+                    </mat-radio-button>
+                </mat-radio-group>
+
+                <div
+                    *ngIf="form.get('pregunta7')?.errors && form.get('pregunta7')?.invalid && form.get('pregunta7')?.touched">
+                    <p class="error-rad" *ngIf="form.get('pregunta7')?.hasError('required')">
+                        Debe seleccionar una opción.
+                    </p>
+                </div>
+                <div class="prr">
+                    <label class="pregunta">8. HACER COMPRAS</label>
+                </div>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                    [(ngModel)]="P8Seleccionada" formControlName="pregunta8">
+                    <mat-radio-button class="example-radio-button" *ngFor="let season of P8" [value]="season">
+                        {{season}}
+                    </mat-radio-button>
+                </mat-radio-group>
+
+                <div
+                    *ngIf="form.get('pregunta8')?.errors && form.get('pregunta8')?.invalid && form.get('pregunta8')?.touched">
+                    <p class="error-rad" *ngIf="form.get('pregunta8')?.hasError('required')">
+                        Debe seleccionar una opción.
+                    </p>
+                </div>
+                <div class="botones">
+                    <div class="alinearBotones">
+                        <button (click)="agregarLawton(bloqueado)" mat-flat-button color="primary">Guardar</button>
+                    </div>
+
+                    <div class="alinearBotones">
+                        <a (click)="onBack()" mat-raised-button color="warn">Cancelar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

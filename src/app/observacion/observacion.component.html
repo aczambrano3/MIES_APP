@@ -1,0 +1,24 @@
+<app-menu [indice]="indice"></app-menu>
+<div class="container">
+      <form class="example-form " [formGroup]="formularioForm">
+        <p class="primero">Registre todas las anomalías que notó en el adulto mayor durante la realización de los test</p>
+        <mat-form-field class="example-full-width">
+          <input matInput  formControlName="pregunta1">
+        </mat-form-field>
+
+        <p class="segundo">Registre todos los problemas que se le presentaron a la hora de realizar la visita</p>
+        <mat-form-field class="example-full-width">
+          <input matInput  formControlName="pregunta2">
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+          <ngx-mat-file-input formControlName="imageFile"  valuePlaceholder="No image file selected"></ngx-mat-file-input>
+        </mat-form-field> 
+            <div class="button">
+              <div>
+                <button mat-flat-button color="primary" (click)="agregarFormulario()">CONTINUAR</button>
+                <button mat-raised-button color="warn" (click)="onBack()">CANCELAR</button>
+              </div>
+            </div>
+      </form>
+  </div>

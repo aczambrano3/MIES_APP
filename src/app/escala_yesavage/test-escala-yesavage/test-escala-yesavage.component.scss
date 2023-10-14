@@ -1,0 +1,54 @@
+:host {
+    .contenido {
+        padding: 1rem 0px;
+        margin: 0px 25%;
+    }
+    .contenido label, .contenido p, .contenido mat-radio-button {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .button-row { text-align: center; }
+    .button-row button {
+        margin: 5px 8px;
+        width: 135px;
+    }
+    .example-radio-group {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 10px 0;
+        align-items: flex-start;
+    }
+    .example-radio-button {
+        margin: 5px;
+    }
+    .error-rad{
+        color: red;
+        font-style: italic;
+        margin-left: 5px;
+        font-weight: 600;
+    }
+    .pregunta {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 15px;
+        opacity: 1;
+    }
+    .sec-preg{
+        margin: 10px 0px 20px;
+    }
+    .prr {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        box-shadow: 5px 10px 20px #a7a5a5bb inset;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .contenido {
+            margin: 0px 10%;
+        }
+    }
+    @media only screen and (min-width: 701px) and (max-width: 900px) {
+        .contenido {
+            margin: 0px 17%;
+        }
+    }
+}

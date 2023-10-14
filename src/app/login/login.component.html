@@ -1,0 +1,27 @@
+<div class="img">
+    <img src="../../assets/imagenes/mies.png" width="150px" height="150px" alt="">
+</div>
+<h3 class="titles2">Sistema de Registro de Formularios MIES</h3><br>
+
+<div>
+    <form (submit)="signIn(identificador.value)">
+
+        <div class="grid-cont">
+            <div>
+                <input type="text" [(ngModel)] = "user.tec_cedula" name= "uname" placeholder="Usuario" required autofocus>
+          
+                <input type="password" [(ngModel)] = "user.tec_contrasenia" name="psw" placeholder="Contraseña" required autofocus autocomplete="off">
+                    <div class="content-select">
+                        <select #identificador>
+                            <option value="" selected>Tipo de usuario</option>
+                            <option value="1">Supervisor</option>
+                            <option value="2">Tecnico</option>
+                        </select>
+                    </div>
+            </div>
+            <div>
+                <button type="submit" class="button">Iniciar Sesión</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,88 @@
+.img{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+.titles2{
+    padding: 5px;
+    right: 90px;
+    font-weight: bold; 
+    text-align: center;
+    margin-top: 1em;
+  }
+.grid-cont {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 200px ; 
+    gap: 10px;
+    padding: 5px;
+  }
+.grid-cont > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(105, 104, 104);
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(105, 104, 104);
+}
+  
+.button{
+    text-decoration: none;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border: none;
+    cursor: pointer;
+  }
+  .button:hover{
+    color: #ffffff;
+    background-color: #59BCED;
+  }
+
+  .content-select{
+    max-width: 250px;
+    position: relative;
+  }
+   
+  .content-select select{
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+      padding: 7px 10px;
+      height: 42px;
+      outline: 0; 
+      border: 0;
+    border-radius: 0;
+    background: #f0f0f0;
+    color: #7b7b7b;
+    color: #999;
+    border:2px solid rgba(0,0,0,0.2);
+      border-radius: 12px;
+      position: relative;
+      transition: all 0.25s ease;
+  }
+   
+  .content-select select:hover{
+    background: #B1E8CD;
+  }
+
+   
+  .content-select:hover i{
+    margin-top: 3px;
+  }
